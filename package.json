@@ -1,7 +1,7 @@
 {
   "name": "compute-circshift",
   "version": "0.0.0",
-  "description": "Shifts elements or characters circularly.",
+  "description": "Shifts array elements (or string characters) circularly.",
   "author": {
     "name": "Athan Reines",
     "email": "kgryte@gmail.com"
@@ -25,12 +25,21 @@
   "keywords": [
     "compute.io",
     "compute",
-    "computation"
+    "computation",
+    "mathematics",
+    "math",
+    "array",
+    "string",
+    "utilities",
+    "utils",
+    "shift"
   ],
   "bugs": {
     "url": "https://github.com/compute-io/circshift/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "validate.io-integer": "^1.0.1"
+  },
   "devDependencies": {
     "chai": "1.x.x",
     "mocha": "1.x.x",

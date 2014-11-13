@@ -2,7 +2,7 @@ circshift
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Shifts elements or characters circularly.
+> Shifts array elements (or string characters) circularly.
 
 
 ## Installation
@@ -19,24 +19,78 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 To use the module,
 
 ``` javascript
-var foo = require( 'compute-circshift' );
+var circshift = require( 'compute-circshift' );
 ```
 
-#### foo( arr )
+#### circshift( x, k )
 
-What does this function do?
+Shifts elements. `x` may be either an `array` or a `string`. `k` is an `integer` specifying how many positions to shift.
+
+``` javascript
+// Arrays...
+var arr = [ 1, 2, 3, 4, 5 ];
+
+// Circularly shift the array 2 positions to the right:
+circshift( arr, 2 );
+// returns [ 4, 5, 1, 2, 3 ]
+
+// Circularly shift the mutated array 3 positions to the left:
+circshift( arr, -3 );
+// returns [ 2, 3, 4, 5, 1 ]
+
+// Strings...
+var str = 'beepboop';
+
+str = circshift( str, 3 );
+// returns 'oopbeepb'
+
+str = circshift( str, -4 );
+// returns 'eepboopb'
+```
+
+Note: mutates an input `array`.
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'compute-circshift' );
+var circshift = require( 'compute-circshift' );
+
+// Simulate some data...
+var data = new Array( 10 ),
+	len = data.length;
+
+for ( var i = 0; i < len; i++ ) {
+	data[ i ] = i;
+}
+
+// Repeatedly shift elements a random number of positions...
+var rand, k;
+for ( var j = 0; j < 20; j++ ) {
+	rand = Math.random() - 0.5;
+	k = Math.round( rand * len * 2 );
+	circshift( data, k );
+	console.log( data.join( ',' ) );
+}
 ```
 
 To run the example code from the top-level application directory,
 
 ``` bash
 $ node ./examples/index.js
+```
+
+## Notes
+
+If provided an input `array`, the `array` is mutated. If mutation is undesired,
+
+``` javascript
+var data = [ 1, 2, 3, 4, 5 ],
+	copy = data.slice();
+
+circshift( copy, 2 );
+
+console.log( copy.join( '\n' ) );
 ```
 
 
