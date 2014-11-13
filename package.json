@@ -1,6 +1,6 @@
 {
   "name": "compute-circshift",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Shifts array elements (or string characters) circularly.",
   "author": {
     "name": "Athan Reines",
