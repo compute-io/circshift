@@ -52,6 +52,7 @@
     "validate.io-boolean-primitive": "^1.0.0",
     "validate.io-integer": "^1.0.5",
     "validate.io-matrix-like": "^1.0.2",
+    "validate.io-number-primitive": "^1.0.0",
     "validate.io-object": "^1.0.4",
     "validate.io-positive-integer": "^1.0.0",
     "validate.io-string-primitive": "^1.0.0",
