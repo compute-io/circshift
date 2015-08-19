@@ -17,7 +17,7 @@ var rand, k;
 for ( var j = 0; j < 20; j++ ) {
 	rand = Math.random() - 0.5;
 	k = Math.round( rand * len * 2 );
-	circshift( data, k );
+	data = circshift( data, k );
 
 	console.log( data.join( ',' )+'\t'+k );
 }
