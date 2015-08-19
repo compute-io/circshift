@@ -22,7 +22,7 @@ To use the module,
 var circshift = require( 'compute-circshift' );
 ```
 
-#### circshift( x, k )
+#### circshift( x, k[, opts] )
 
 Shifts elements. `x` may be either a [`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string), an [`array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), a [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays), or a [`matrix`](https://github.com/dstructs/matrix). `k` is an `integer` specifying how many positions to shift. In the case that `x` is a matrix, `k` can also be an `array` with two elements specifying how many positions to shift along rows and columns, respectively.
 
