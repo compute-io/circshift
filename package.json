@@ -47,6 +47,7 @@
     "compute-incrspace": "^1.0.2",
     "dstructs-array": "^1.0.0",
     "dstructs-matrix": "^2.0.0",
+    "validate.io-array": "^1.0.6",
     "validate.io-array-like": "^1.0.1",
     "validate.io-boolean-primitive": "^1.0.0",
     "validate.io-integer": "^1.0.5",
